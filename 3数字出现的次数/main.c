@@ -28,7 +28,7 @@ int cout(int key,int value)
         data[i]=value%10;
         value/=10;
     }
-    for(n=0n<i;n++)
+    for(n=0;n<i;n++)
     {
         if(0==n)
         {
