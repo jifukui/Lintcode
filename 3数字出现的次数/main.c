@@ -32,11 +32,11 @@ int cout(int key,int value)
     {
         if(0==n)
         {
-            num=key>data[n]?0:1;
+            num=data[n]>=key?0:1;
         }
         else
         {
-            if(key>=data[n])
+            if(data[n]>=key)
             {
                 num+=transform[n]+data[n]-key;
             }
