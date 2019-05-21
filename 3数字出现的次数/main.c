@@ -1,5 +1,5 @@
 #include <stdio.h>
-int transform[10]={0,1,2,3,4,5,6,7,8,9};
+int transform[10]={0,10,100,1000,10000,100000,1000000,10000000,100000000,1000000000};
 int cout(int key,int value);
 int main(int argc ,char **argv)
 {
