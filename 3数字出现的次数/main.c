@@ -39,11 +39,11 @@ int cout(int key,int value)
         {
             if(data[n]>=key)
             {
-                num+=transform[n]+data[n]-key;
+                num=num+transform[n]+data[n]-key;
             }
             else
             {
-                num+=data[n]-1;
+                num=num+data[n]-1;
             }    
         }
         
