@@ -37,13 +37,13 @@ int cout(int key,int value)
         }
         else
         {
-            if(key>=data[n])
+            if(data[n]>=key)
             {
                 num+=transform[n]+data[n]-key;
             }
             else
             {
-                num+=key-data[n];
+                num+=data[n]-1;
             }    
         }
         
