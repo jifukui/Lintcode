@@ -57,7 +57,7 @@ int cout(int key,int value)
         }
         else if((n+1)==i)
         {
-            if(data[n]>(key+1))
+            if(data[n]>key)
             {
                 num=num+transform[n]+val[n]*(data[n]-key-1);
             }
