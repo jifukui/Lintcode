@@ -57,13 +57,13 @@ int cout(int key,int value)
         }
         else if((n+1)==i)
         {
-            if(data[n]>key)
+            if(data[n]>(key+1))
             {
-                num=num+transform[n]+val[n]*(data[n]-key-1)+data[n]+transform[n];
+                num=num+transform[n]+val[n]*(data[n]-key-1)+data[n]+transform[n]+1;
             }
             else
             {
-                num=num+value-data[n]+transform[n];
+                num=num+value-data[n]+transform[n]+1;
             }    
         }
         else
