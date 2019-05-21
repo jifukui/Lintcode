@@ -27,12 +27,13 @@ int cout(int key,int value)
     {
         data[i]=value%10;
         value/=10;
+        i++;
     }
     for(n=0;n<i;n++)
     {
         if(0==n)
         {
-            num=key>=data[n]?0:1;
+            num=key>data[n]?0:1;
         }
         else
         {
