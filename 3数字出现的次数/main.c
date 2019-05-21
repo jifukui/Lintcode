@@ -1,6 +1,8 @@
 #include <stdio.h>
 int transform[10]={0,10,100,1000,10000,100000,1000000,10000000,100000000,1000000000};
+int val[10];
 int cout(int key,int value);
+int sun();
 int main(int argc ,char **argv)
 {
     if(argc==3)
@@ -10,6 +12,7 @@ int main(int argc ,char **argv)
         value=atoi(argv[2]);
         printf("输入的键值为%d\n",key);
         printf("输入的数据为%d\n",value);
+        sun();
         num=cout(key,value);
         printf("数字%d 在从0~%d 出现的次数为%d\n",key,value,num);
     }
@@ -19,10 +22,27 @@ int main(int argc ,char **argv)
     }
     return 0;
 }
+int sum()
+{
+    int i=0;
+    for(i;i<10;i++)
+    {
+        if(i==0)
+        {
+            val[i]=1;
+        }
+        else
+        {
+            val[i]=val[i-1]*9+transform[i];
+        }
+        
+    }
+}
 int cout(int key,int value)
 {
     int data[10];
-    int i=0,n,num=0,j;
+    int i=0,n,num=0,j,ori;
+    ori=value;
     while (value)
     {
         data[i]=value%10;
@@ -35,16 +55,20 @@ int cout(int key,int value)
         {
             num=key>data[n]?0:1;
         }
-        else
+        else if((n+1)==i)
         {
-            if(data[n]>=key)
+            if(data[n]>key)
             {
-                num=num+transform[n]+data[n]-key;
+                num=num+transform[n]+value[n]*(data[n]-key-1)+data[n]+transform[n];
             }
             else
             {
-                num=num+data[n]-1;
+                num=num+value-data[n]+transform[n];
             }    
+        }
+        else
+        { 
+            num=num+val[n]; 
         }
         
     }
