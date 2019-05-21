@@ -12,7 +12,7 @@ int main(int argc ,char **argv)
         value=atoi(argv[2]);
         printf("输入的键值为%d\n",key);
         printf("输入的数据为%d\n",value);
-        sun();
+        sum();
         num=cout(key,value);
         printf("数字%d 在从0~%d 出现的次数为%d\n",key,value,num);
     }
