@@ -59,7 +59,7 @@ int cout(int key,int value)
         {
             if(data[n]>key)
             {
-                num=num+transform[n]+value[n]*(data[n]-key-1)+data[n]+transform[n];
+                num=num+transform[n]+val[n]*(data[n]-key-1)+data[n]+transform[n];
             }
             else
             {
