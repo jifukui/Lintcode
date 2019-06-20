@@ -5,12 +5,10 @@ vector<int> mergeSortedArray(vector<int> &A, vector<int> &B) ;
 int main()
 {
     int i,len;
-    vector <int> a[1];
-    vector <int> b[1];
+    vector <int> a(1);
+    vector <int> b(1);
     vector <int> c;
-    a[1]=1;
-    b[1]=1;
-    c=mergeSortedArray(a,b);
+    c=mergeSortedArray(&a,&b);
     len=c.size();
     for(i=0;i<len;i++)
     {
