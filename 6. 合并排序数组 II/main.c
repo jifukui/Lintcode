@@ -33,25 +33,28 @@ vector<int> mergeSortedArray(vector<int> &A, vector<int> &B)
             {
                 if(A[i1]>=B[i2])
                 {
-                    data[i++]=B[i2++];
+                    //data[i++]=B[i2++];
+                    data.insert(i++,B[i2++]);
                 }
                 else
                 {
-                    data[i++]=A[i1++];
+                    //data[i++]=A[i1++];
+                    data.insert(i++,A[i1++]);
                 }
             }
             else if(i1>=len1)
             {
                 for(temp=i2;temp<len2;i2++)
                 {
-                    data[i++]=B[i2];
+                    data.insert(i++,B[i2]);
                 }
             }
             else if(i2>=len2)
             {
                 for(temp=i1;temp<len1;i1++)
                 {
-                    data[i++]=A[i1];
+                    //data[i++]=A[i1];
+                    data.insert(i++,A[i1]);
                 }
             }
             else
