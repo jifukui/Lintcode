@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-vector<int> mergeSortedArray(vector<int> &A, vector<int> &B) 
+vector<int> mergeSortedArray(vector<int> &A, vector<int> &B) ;
 int main()
 {
     int i,len;
