@@ -8,7 +8,7 @@ int main()
     vector <int> a(1);
     vector <int> b(1);
     vector <int> c;
-    c=mergeSortedArray(&a,&b);
+    c=mergeSortedArray(a,b);
     len=c.size();
     for(i=0;i<len;i++)
     {
