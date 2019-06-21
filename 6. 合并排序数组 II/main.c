@@ -33,13 +33,17 @@ vector<int> mergeSortedArray(vector<int> &A, vector<int> &B)
             {
                 if(A[i1]>=B[i2])
                 {
-                    data[i++]=B[i2++];
+                    //data[i++]=B[i2++];
                     //data.insert(i++,B[i2++]);
+                    data.push_back(B[i2++]);
+                    i++;
                 }
                 else
                 {
-                    data[i++]=A[i1++];
+                    //data[i++]=A[i1++];
                     //data.insert(i++,A[i1++]);
+                    data.push_back(A[i1++]);
+                    i++;
                 }
             }
             else if(i1>=len1)
@@ -47,15 +51,19 @@ vector<int> mergeSortedArray(vector<int> &A, vector<int> &B)
                 for(temp=i2;temp<len2;i2++)
                 {
                     //data.insert(i++,B[i2]);
-                    data[i++]=B[i2];
+                    //data[i++]=B[i2];
+                    data.push_back(B[i2]);
+                    i++;
                 }
             }
             else if(i2>=len2)
             {
                 for(temp=i1;temp<len1;i1++)
                 {
-                    data[i++]=A[i1];
+                    //data[i++]=A[i1];
                     //data.insert(i++,A[i1]);
+                    data.push_back(A[i1]);
+                    i++;
                 }
             }
             else
